@@ -9,4 +9,6 @@ install:
 script:
   - "go test"
   - "python --version"
+  - "pip --version"
+  - "trial --version"
   - "./test"
