@@ -3,12 +3,16 @@ language: go
 go:
   - 1.6
 
-install:
-  - "go build -o test"
+before_install:
+  - pip install -r requirements.txt
 
-script:
-  - "go test"
+install:
   - "python --version"
+  - "python2.7 -- version"
   - "pip --version"
   - "trial --version"
+
+script:
+  - "go build -o test"
+  - "go test"
   - "./test"
